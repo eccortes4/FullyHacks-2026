@@ -38,6 +38,7 @@ body, html {
 }
 
 .map {
+    display: grid;
     position: relative;
     padding: 3rem 4rem;
     margin-top: auto;
@@ -46,10 +47,20 @@ body, html {
 }
 #coords {
     position: absolute;
+    justify-items: left;
+}
+
+
+.Click-area {
+    width: 79%;
+    height: 94%;
+    position: absolute;
+    grid-area: 1 / 1;
 }
 
 #map-png {
     width: 100%;
+    grid-area: 1 / 1;
 }
 
 .footer {
