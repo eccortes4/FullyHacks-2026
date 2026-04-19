@@ -100,7 +100,7 @@ body, html {
     margin: 2rem;
 }
 
-.about-section button {
+.about-section button, .dd-main button {
     padding: 0.5rem 1rem;
     font-size: x-large;
     background-color: var(--button-bg);
@@ -168,11 +168,15 @@ body, html {
     background-color: var(--dd-bg);
 }
 
-.dd-main h1 {
-    text-align: left;
-    padding-left: 4rem;
-}
-
 .dd-creatures {
     padding: 5rem;
+}
+
+.creature {
+    margin: 5rem;
+}
+
+.creature img {
+    border-radius: 50%;
+    width: 15rem;
 }

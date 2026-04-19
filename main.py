@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import helper
 
 app = Flask("__name__")
 
@@ -16,7 +17,8 @@ def dive():
     lat = float(request.args.get("lat"))
     long = float(request.args.get("long"))
     depth = int(request.args.get("depth"))
-    creatures = []
+    creatures = helper.globalCoordToAnimalInfoDict(lat=lat, long=long)
+    creatures.sort(key=lambda creature:creature['depth'])
 
     return render_template("divedeeper.html", lat=lat, long=long, dep=depth, creatures=creatures)
 

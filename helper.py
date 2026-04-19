@@ -1,12 +1,11 @@
 import json
 
 
-def globalCoordToAnimalInfoDict(lat: float, long: float) -> str:
+def globalCoordToAnimalInfoDict(lat: float, long: float) -> list[dict]:
   fixed_coord_strs = ["32 -180", "40 -170", "42 -160", "33 -130"]
 
-  with open('data.json', 'r') as file:
+  with open('data.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
-
 
   if long < -178.75:
     return data[fixed_coord_strs[0]]
@@ -17,5 +16,3 @@ def globalCoordToAnimalInfoDict(lat: float, long: float) -> str:
   else:
     return data[fixed_coord_strs[3]]
 
-
-print(globalCoordToAnimalInfoDict(32, -180))

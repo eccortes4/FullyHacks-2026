@@ -73,18 +73,18 @@
   ],
   "40 -170": [
     {
-      "name": "Fried Egg Jellyfish",
-      "scientific_name": "Phacellophora Camtschatica",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Phacellophoracamtschatica.jpg",
-      "depth": 13.5,
-      "summary": "Phacellophora, commonly known as the fried egg jellyfish or egg-yolk jellyfish, is a very large jellyfish in the monotypic family Phacellophoridae containing a single species Phacellophora camtschatica. This genus can be easily identified by the yellow coloration in the center of its body which closely resembles an egg yolk, hence its common name. Some individuals can have a bell close to 60 cm (2 ft) in diameter, and most individuals have 16 clusters of up to a few dozen tentacles, each up to 6 m (20 ft) long."
-    },
-    {
       "name": "Blue Lanternfish",
       "scientific_name": "Tarletonbeania Crenularis",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Tarletonbeania_crenularis.jpg",
       "depth": 17.79,
       "summary": "Tarletonbeania is a genus of lanternfishes found in the Pacific Ocean. The genus is named after ichthyologist Tarleton H. Bean (1846-1916), of the U.S. National Museum."
+    },
+    {
+      "name": "Fried Egg Jellyfish",
+      "scientific_name": "Phacellophora Camtschatica",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Phacellophoracamtschatica.jpg",
+      "depth": 13.5,
+      "summary": "Phacellophora, commonly known as the fried egg jellyfish or egg-yolk jellyfish, is a very large jellyfish in the monotypic family Phacellophoridae containing a single species Phacellophora camtschatica. This genus can be easily identified by the yellow coloration in the center of its body which closely resembles an egg yolk, hence its common name. Some individuals can have a bell close to 60 cm (2 ft) in diameter, and most individuals have 16 clusters of up to a few dozen tentacles, each up to 6 m (20 ft) long."
     }
   ],
   "42 -160": [
