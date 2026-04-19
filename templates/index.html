@@ -19,8 +19,12 @@
       </section>
       <section class="map">
         <!-- map -->
+         <div id="coords">
+          Hello
+        </div>
         <img id="map-png" src="{{url_for('static', filename='explorso_map.png')}}">
       </section>
+      <script src="../static/get-x-y.js"></script>
       <section class="footer">
         <p><a href="{{ url_for('about') }}">About</a></p>
         <p><a href="https://github.com/eccortes4/FullyHacks-2026" target="_blank">Github</a></p>
