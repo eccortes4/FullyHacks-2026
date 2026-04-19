@@ -10,6 +10,9 @@ def index():
 def about():
     return render_template("about.html")
 
+@app.route('/dive')
+def dive():
+    return render_template("divedeeper.html")
 
 if __name__ == "__main__":
     index()

@@ -4,6 +4,7 @@
     --footer-bg: #00001f;
     --footer-color: #8b909d;
     --button-bg: #023E7D;
+    --dd-bg: #0353A4;
 }
 
 :global(*) {
@@ -97,10 +98,70 @@ body, html {
     color: white;
 }
 
+.about-pics {
+    height: fit-content;
+    background-color: var(--home-bg);
+    padding: 10rem;
+    padding-top: 4rem;
+}
+
 .about-pics h1 {
     margin: 4rem;
 }
 
 .team-pics {
+    display: flex;
+    justify-content: space-between;
+}
 
+.team-pics img {
+    border-radius: 50%;
+    width: 20rem;
+}
+
+.pic a:link {
+    color: white;
+    text-decoration: none;
+}
+.pic a:hover {
+    color: white;
+    text-decoration: underline;  
+}
+.pic a:visited {
+    color: white;
+    text-decoration: none;
+}
+.pic a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+.pic p {
+    font-size: x-large;
+}
+
+.dd-page {
+    background-color: var(--dd-bg);
+    color: white;
+    width: 100vw;
+}
+
+#dd-dive-img {
+    width: 100vw;
+    top: 0;
+}
+
+.dd-main {
+    min-height: 100vh;
+    height: fit-content;
+    background-color: var(--dd-bg);
+}
+
+.dd-main h1 {
+    text-align: left;
+    padding-left: 4rem;
+}
+
+.dd-creatures {
+    padding: 5rem;
 }
