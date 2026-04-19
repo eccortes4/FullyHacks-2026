@@ -1,7 +1,7 @@
 
 let map = document.querySelector('.map');
 let page = document.querySelector('.home-page');
-let map_img = document.querySelector('#map-png');
+let map_img = document.querySelector('.Click-area');
 map_img.addEventListener("mousemove", getPos);
 map_img.addEventListener("click", async (e) => {
     const pos = getPos(e);
@@ -21,11 +21,13 @@ function getPos(e) {
     rel_x = x / map_width;
     rel_y = y / map_height;
 
-    long = -195 + 65 * rel_x
-    lat = 45 - 45 * rel_y 
+    long = (-195 + 65 * rel_x).toFixed(2);
+    lat = (45 - 45 * rel_y).toFixed(2); 
 
-    cursor=`Your Mouse Position Is : ${lat} and  ${long}`;
-    document.getElementById("coords").innerText=cursor
+    lat_text = `Latitude: ${lat}`
+    long_text = `Longitude: ${long}`
+    document.getElementById("long").innerText=long_text;
+    document.getElementById("lat").innerText=lat_text;
     return {lat: lat,
         long: long
     }
