@@ -1,0 +1,101 @@
+:root {
+    --home-bg: #001845;
+    --home-header-bg: #001233;
+    --footer-bg: #00001f;
+    --footer-color: #8b909d;
+    --button-bg: #023E7D;
+}
+
+:global(*) {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.home-page, .about-page {
+    background-color: var(--home-bg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.header-home {
+    background-color: var(--home-header-bg);
+    padding: 3rem;
+}
+
+#logo-png {
+    height: 16rem;
+}
+
+.map {
+    padding: 3rem 4rem;
+    margin-top: auto;
+    background-color: var(--home-bg);
+}
+
+#map-png {
+    width: 100%;
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    padding: 0.7rem 1rem;
+    margin-top: auto;
+    font-size: large;
+}
+
+.footer a:link {
+    color: var(--footer-color);
+    text-decoration: none;
+}
+.footer a:hover {
+    color: var(--footer-color);
+    text-decoration: underline;
+}
+.footer a:visited {
+    color: var(--footer-color);
+    text-decoration: none;
+}
+.footer a:active {
+    color: var(--footer-color);
+    text-decoration: underline;
+}
+
+.about-section {
+    background-color: var(--home-header-bg);
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+
+.about-section h1 {
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+.about-section button {
+    padding: 0.5rem 1rem;
+    font-size: x-large;
+    background-color: var(--button-bg);
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.about-pics h1 {
+    margin: 4rem;
+}
+
+.team-pics {
+
+}

@@ -12,19 +12,22 @@
     <title>Home - ExplorSO</title>
   </head>
   <body>
-    <main class="home-page">
-      <section class="header-home">
-        <img id="logo-png" src="{{url_for('static', filename='explorso_logo.png')}}">
-        <h1>Explore the SubOcean and the Creatures that Live Within.</h1>
+    <main class="about-page">
+      <section class="about-section">
+        <!-- about the page -->
+        <a href="{{ url_for('index') }}"><button>Home</button></a>
+        <h1>About <b>ExplorSO</b></h1>
+        <h3>
+            ExplorSO was created for <b>FullyHacks 2026</b>,<br>
+            Cal State Fullerton's annual hackathon.<br>
+        </h3>
       </section>
-      <section class="map">
-        <!-- map -->
-        <img id="map-png" src="{{url_for('static', filename='explorso_map.png')}}">
-      </section>
-      <section class="footer">
-        <p><a href="{{ url_for('about') }}">About</a></p>
-        <p><a href="https://github.com/eccortes4/FullyHacks-2026" target="_blank">Github</a></p>
-        <p>Made with 💙</p>
+      <section class="about-pics">
+        <!-- our pics -->
+        <h1>The nerds behind <b>ExplorSO</b>:</h1>
+        <div class="team-pics">
+            <!-- imgs -->
+        </div>
       </section>
     </main>
   </body>
