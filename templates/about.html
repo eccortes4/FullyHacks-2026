@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Home - ExplorSO</title>
+    <title>About - ExplorSO</title>
   </head>
   <body>
     <main class="about-page">
@@ -20,13 +20,31 @@
         <h3>
             ExplorSO was created for <b>FullyHacks 2026</b>,<br>
             Cal State Fullerton's annual hackathon.<br>
+            <br>
+            This web app uses <b>real world data</b> to fetch<br>
+            information about the fascinating creatures<br>
+            that live in our oceans.
         </h3>
       </section>
       <section class="about-pics">
         <!-- our pics -->
         <h1>The nerds behind <b>ExplorSO</b>:</h1>
         <div class="team-pics">
-            <!-- imgs -->
+            <div class="pic">
+              <img src="{{url_for('static', filename='eddie.png')}}">
+              <p>Eddie Cortes</p>
+              <p><a href="https://github.com/eccortes4" target="_blank">Github: eccortes4</a></p>
+            </div>
+            <div class="pic">
+              <img src="{{url_for('static', filename='evan.png')}}">
+              <p>Evan Jimenez</p>
+              <p><a href="https://github.com/EvanCPSC" target="_blank">Github: EvanCPSC</a></p>
+            </div>
+            <div class="pic">
+              <img src="{{url_for('static', filename='quentin.png')}}">
+              <p>Quentin Rivest</p>
+              <p><a href="https://github.com/QuentinRivest" target="_blank">Github: QuentinRivest</a></p>
+            </div>
         </div>
       </section>
     </main>
