@@ -3,7 +3,6 @@ import string
 
 from pyobis import occurrences
 
-
 # Makes octagon polygon (to mimic circle). [HELPER FOR getScinamesNamesDepth]
 def getWKTPolygonStr(lat: float, long: float, radius: float) -> str:
   return (f"POLYGON(({long - 0.7*radius} {lat + radius}, {long + 0.7*radius} {lat + radius}, " +  #top side
@@ -14,10 +13,7 @@ def getWKTPolygonStr(lat: float, long: float, radius: float) -> str:
 
 
 # Sorted by depth (in meters), least to greatest.
-def getScinamesNamesDepths(*,
-                           lat: float,
-                           long: float,
-                           radius: float=5) -> list[tuple[str, str, float]]:
+def getAnimalsAtLocation(*, lat: float, long: float, radius: float=10) -> list[tuple[str, str, float]]:
   data = occurrences.search(
     taxonid=2,
     geometry=getWKTPolygonStr(lat, long, radius),
@@ -30,17 +26,19 @@ def getScinamesNamesDepths(*,
     if isinstance(name, str) and not math.isnan(depth):
       scinames_names_depths.append( (string.capwords(sci_name), string.capwords(name), depth) )
 
-  scinames_names_depths.sort(
-    key=lambda sciname_name_depth : sciname_name_depth[2]
-  )
+  #scinames_names_depths.sort(
+  #  key=lambda sciname_name_depth : sciname_name_depth[2]
+  #)
 
   return scinames_names_depths
 
 
 def printScinamesNamesDepth() -> None:
+  animalsData = getAnimalsAtLocation(lat=32, long=-170)
+
   print("ANIMAL NAMES:")
-  for sci_name, name, depth in getScinamesNamesDepths(lat=32, long=-118):
+  for sci_name, name, depth in animalsData:
     print(f"\t{name} ({sci_name})\t{depth}")
 
 
-# printScinamesNamesDepth()
+#printScinamesNamesDepth()
