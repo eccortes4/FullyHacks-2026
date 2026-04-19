@@ -38,9 +38,14 @@ body, html {
 }
 
 .map {
+    position: relative;
     padding: 3rem 4rem;
     margin-top: auto;
     background-color: var(--home-bg);
+    cursor: crosshair;
+}
+#coords {
+    position: absolute;
 }
 
 #map-png {
