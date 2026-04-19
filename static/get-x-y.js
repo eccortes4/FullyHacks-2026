@@ -1,8 +1,12 @@
 
 let map = document.querySelector('.map');
 let page = document.querySelector('.home-page');
-let map_img = document.querySelector('#map-png')
-map_img.addEventListener("mousemove", getPos)
+let map_img = document.querySelector('#map-png');
+map_img.addEventListener("mousemove", getPos);
+map_img.addEventListener("click", async (e) => {
+   depth = await getDepth(getPos(e).lat, getPos(e).long)
+   console.log(`Depth: ${depth}`);
+});
 
 function getPos(e) {
     const map_x = map_img.getBoundingClientRect().x;
@@ -21,5 +25,23 @@ function getPos(e) {
 
     cursor=`Your Mouse Position Is : ${lat} and  ${long}`;
     document.getElementById("coords").innerText=cursor
+    return {lat: lat,
+        long: long
+    }
 }
+
+
+ async function getDepth(lat, long) {
+    resp = await fetch(`https://ocean.amentum.io/gebco?latitude=${lat}&longitude=${long}`, {
+        method: "GET",
+        headers: {
+        "accept": "application/json",
+        "API-Key": "M49Fwt5v69bSrPkEALthhA180ydLqcAq"
+        }
+    })
+    res = await resp.json();
+    console.log(res);
+    return res.elevation.value;
+    
+    }
 
