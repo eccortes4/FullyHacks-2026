@@ -16,10 +16,15 @@
       <img src="{{url_for('static', filename='explorso_dive.png')}}" id="dd-dive-img">
       <section class="dd-main">
             <h1>Creatures you may find at</h1>
-            <h1 id="dd-depth">Depth {{ dep }}</h1>
-            <h1 id="dd-coords">and at Coordinates {{ lat }}, {{ long }}</h1>
+            <h1 id="dd-depth">Depth: <b>{{ dep }}</b></h1>
+            <h1 id="dd-coords">and at Coordinates: <b>{{ lat }}, {{ long }}</b></h1>
         <section class="dd-creatures">
-
+            {% for item in creatures %}
+                <div class="creature">
+                        <img src="{{item[image_url]}}">
+                </div>
+            {% endfor %}
+            
         </section>
       </section>
     </main>

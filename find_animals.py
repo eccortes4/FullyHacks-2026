@@ -32,13 +32,12 @@ def getAnimalsAtLocation(*, lat: float, long: float, radius: float=10) -> list[t
 
   return scinames_names_depths
 
+# for testing
+# 
+# def printScinamesNamesDepth() -> None:
+#   animalsData = getAnimalsAtLocation(lat=32, long=-170)
 
-def printScinamesNamesDepth() -> None:
-  animalsData = getAnimalsAtLocation(lat=32, long=-170)
+#   print("ANIMAL NAMES:")
+#   for sci_name, name, depth in animalsData:
+#     print(f"\t{name} ({sci_name})\t{depth}")
 
-  print("ANIMAL NAMES:")
-  for sci_name, name, depth in animalsData:
-    print(f"\t{name} ({sci_name})\t{depth}")
-
-
-#printScinamesNamesDepth()

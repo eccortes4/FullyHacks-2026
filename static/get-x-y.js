@@ -4,8 +4,9 @@ let page = document.querySelector('.home-page');
 let map_img = document.querySelector('#map-png');
 map_img.addEventListener("mousemove", getPos);
 map_img.addEventListener("click", async (e) => {
-   depth = await getDepth(getPos(e).lat, getPos(e).long)
-   console.log(`Depth: ${depth}`);
+    const pos = getPos(e);
+    const depth = await getDepth(lat, long);
+    window.location.href = `/dive?lat=${pos.lat}&long=${pos.long}&depth=${depth}`;
 });
 
 function getPos(e) {
